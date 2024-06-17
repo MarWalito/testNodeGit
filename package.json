@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nodegit": "^0.27.0",
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
     "nodeit": "^2.0.17"
   }
 }

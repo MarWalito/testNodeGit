@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Push CSV</title>
+</head>
+<body>
+  <button id="pushButton">Push environment.csv to version repo</button>
+
+  <script>
+    document.getElementById('pushButton').addEventListener('click', async () => {
+      try {
+        const response = await fetch('/push-csv', { method: 'POST' });
+        const result = await response.json();
+        alert(result.message);
+      } catch (error) {
+        alert('Error: ' + error.message);
+      }
+    });
+  </script>
+</body>
+</html>
